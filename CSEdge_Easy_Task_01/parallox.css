@@ -1,0 +1,120 @@
+/* Base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+     padding: 0 20px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 1000;
+    border-bottom: 2px solid white; /* Add border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+main {
+    margin-top: 60px; /* Adjust if header height changes */
+}
+
+section {
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section .content {
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeInUp 2s;
+}
+
+/* Parallax background images */
+#section1 {
+    background-image: url('cloude.jpg');
+}
+
+#section2 {
+    background-image: url('sun.jpg');
+}
+
+#section3 {
+    background-image: url('tiger.jpg');
+}
+
+#section4 {
+    background-image: url('crop.jpg');
+}
+
+/* Animation effects */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section .content {
+        width: 90%;
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    section {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        padding: 5px;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+}
