@@ -1,0 +1,200 @@
+/* Base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar styles */
+nav {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    float: left;
+    font-size: 1.5em;
+    margin-left: 20px;
+}
+
+nav .nav-links {
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+nav .nav-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav .nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Slogan Section styles */
+#slogan {
+    background: url('perfect.jpg') no-repeat center center;
+    background-size: 100% auto; /* Image width will be 100% of the container, height will auto adjust */
+    background-attachment: fixed; /* Image stays in place while scrolling */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#slogan .slogan-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#slogan h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#slogan p {
+    font-size: 1.2em;
+}
+
+/* About Section styles */
+#about {
+    background: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#about p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Services Section styles */
+#services {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+#services .service-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#services .card {
+    background: #f9f9f9;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+
+#services .card h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+#services .card p {
+    font-size: 1em;
+}
+
+/* Offers Section styles */
+#offers {
+    background: #ffebcc;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#offers h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#offers p {
+    font-size: 1.5em;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+/* Footer styles */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav .nav-links {
+        float: none;
+        text-align: center;
+    }
+
+    nav .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #services .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #slogan h1 {
+        font-size: 2em;
+    }
+
+    #slogan p {
+        font-size: 1em;
+    }
+
+    #about h2, #services h2, #offers h2 {
+        font-size: 2em;
+    }
+
+    #offers p {
+        font-size: 1.2em;
+    }
+}
